@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Plan - FitBuddy</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 30px auto; padding: 20px; }
+        .card { background: #f9f9f9; padding: 20px; border-radius: 10px; margin: 15px 0; white-space: pre-wrap; }
+        a { display:inline-block; margin-top:20px; padding:10px 20px; background:#4CAF50; color:white; text-decoration:none; }
+    </style>
+</head>
+<body>
+    <h1>Hi {{ name }}! 💪</h1>
+    <h2>Your 7-Day Workout Plan</h2>
+    <div class="card">{{ plan }}</div>
+    
+    <h2>🥗 Nutrition Tips</h2>
+    <div class="card">{{ tip }}</div>
+
+    <h3>Not happy? Give feedback</h3>
+    <form action="/feedback" method="post">
+        <input type="text" name="feedback_text" placeholder="e.g. Make day 3 easier" style="width:100%;padding:10px;" required>
+        <button type="submit" style="padding:10px 20px;margin-top:10px;">Update Plan</button>
+    </form>
+
+    <a href="/">← Create New Plan</a>
+</body>
+</html>
