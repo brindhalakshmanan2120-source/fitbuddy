@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitBuddy - AI Fitness Coach</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 50px auto; padding: 20px; }
+        input, select, button { width: 100%; padding: 12px; margin: 10px 0; }
+        button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🏋️ FitBuddy</h1>
+    <p>Your AI Fitness Coach powered by Gemini</p>
+    <form action="/generate" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <select name="goal" required>
+            <option value="">Select Goal</option>
+            <option value="weight loss">Weight Loss</option>
+            <option value="muscle gain">Muscle Gain</option>
+            <option value="general fitness">General Fitness</option>
+        </select>
+        <select name="level" required>
+            <option value="">Fitness Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        <button type="submit">Generate My Plan</button>
+    </form>
+</body>
+</html>
